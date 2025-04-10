@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraph Playground</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/icons/Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="light-mode">
+    <button id="togglePanelBtn"><i class="fas fa-sliders-h"></i></button>
+
+    <div class="controls collapsed">
+        <div class="panel-header">
+            <h2>Text Controls</h2>
+        </div>
+        
+        <div class="control-section">
+            <label for="textArea">Enter text paragraph:</label>
+            <textarea id="textArea">This is a sample paragraph where each letter will follow your cursor when it gets close. Move your cursor around to see the effect in action. When your cursor moves away, all letters will return to their original positions. If youre using a touch device, tap and hold to see the 
+                effect.
+            </textarea>
+            <button id="updateTextBtn">Update Text</button>
+        </div>
+        
+        <div class="control-section">
+            <label for="fontSelect">Choose Font:</label>
+            <select id="fontSelect">
+                <option value="font-arial">Arial</option>
+                <option value="font-times">Times New Roman</option>
+                <option value="font-minecraft">Minecraft</option>
+                <option value="font-handwritten">Handwritten</option>
+            </select>
+        </div>
+        
+        <div class="control-section">
+            <label for="vacuumStrength">Vacuum Strength:</label>
+            <input type="range" min="1" max="100" value="50" class="slider" id="vacuumStrength">
+            <div class="value-display" id="strengthValue">50%</div>
+            
+            <label for="vacuumRange">Vacuum Range:</label>
+            <input type="range" min="50" max="300" value="150" class="slider" id="vacuumRange">
+            <div class="value-display" id="rangeValue">150px</div>
+        </div>
+        
+        <div class="control-section">
+            <label for="hoverColor">Hover Color:</label>
+            <input type="color" id="hoverColor" class="color-picker" value="#ff4500">
+            <div class="color-preview" id="colorPreview" style="background-color: #ff4500;"></div>
+            
+            <label for="colorIntensity">Color Intensity:</label>
+            <input type="range" min="1" max="100" value="70" class="slider" id="colorIntensity">
+            <div class="value-display" id="intensityValue">70%</div>
+        </div>
+        
+        <button id="toggleModeBtn"><i class="fas fa-sun"></i></button>
+    </div>
+
+    <div class="container" id="textContainer"></div>
+    
+    <footer>
+        © 2025 Paragraph Playground. Designed by Tsarl's.
+    </footer>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
